@@ -1,0 +1,3443 @@
+{
+  "Split Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "The text content to animate."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional class names to style the component."
+      },
+      "delay": {
+        "type": "number",
+        "default": "100",
+        "description": "Delay between animations for each letter (in ms)."
+      },
+      "animationFrom": {
+        "type": "object",
+        "default": "{ opacity: 0, transform: 'translate3d(0,40px,0)' }",
+        "description": "The initial animation state of each letter."
+      },
+      "animationTo": {
+        "type": "object",
+        "default": "{ opacity: 1, transform: 'translate3d(0,0,0)' }",
+        "description": "The target animation state of each letter."
+      },
+      "easing": {
+        "type": "string",
+        "default": "\"easeOutCubic\"",
+        "description": "Easing function for the animation."
+      },
+      "threshold": {
+        "type": "number",
+        "default": "0.1",
+        "description": "Intersection threshold to trigger the animation."
+      },
+      "rootMargin": {
+        "type": "string",
+        "default": "\"-100px\"",
+        "description": "Root margin for the intersection observer."
+      },
+      "textAlign": {
+        "type": "string",
+        "default": "\"center\"",
+        "description": "Sets the text alignment (e.g., 'left', 'center', 'right')."
+      },
+      "onLetterAnimationComplete": {
+        "type": "function",
+        "default": "undefined",
+        "description": "Callback function triggered when all letter animations complete."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Blur Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "The text content to animate."
+      },
+      "animateBy": {
+        "type": "string",
+        "default": "\"words\"",
+        "description": "Determines whether to animate by 'words' or 'letters'."
+      },
+      "direction": {
+        "type": "string",
+        "default": "\"top\"",
+        "description": "Direction from which the words/letters appear ('top' or 'bottom')."
+      },
+      "delay": {
+        "type": "number",
+        "default": "200",
+        "description": "Delay between animations for each word/letter (in ms)."
+      },
+      "threshold": {
+        "type": "number",
+        "default": "0.1",
+        "description": "Intersection threshold for triggering the animation."
+      },
+      "rootMargin": {
+        "type": "string",
+        "default": "\"0px\"",
+        "description": "Root margin for the intersection observer."
+      },
+      "onAnimationComplete": {
+        "type": "function",
+        "default": "undefined",
+        "description": "Callback function triggered when all animations complete."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Circular Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "''",
+        "description": "The text to display in a circular layout."
+      },
+      "spinDuration": {
+        "type": "number",
+        "default": "20",
+        "description": "The duration (in seconds) for one full rotation."
+      },
+      "onHover": {
+        "type": "'slowDown' | 'speedUp' | 'pause' | 'goBonkers'",
+        "default": "undefined",
+        "description": "Specifies the hover behavior variant. Options include 'slowDown', 'speedUp', 'pause', and 'goBonkers'."
+      },
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Optional additional CSS classes to apply to the component."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Shiny Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "-",
+        "description": "The text to be displayed with the shiny effect."
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Disables the shiny effect when set to true."
+      },
+      "speed": {
+        "type": "number",
+        "default": "5",
+        "description": "Specifies the duration of the animation in seconds."
+      },
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Adds custom classes to the root element."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Text Pressure": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "\"Hello!\"",
+        "description": "Text content that will be displayed and animated."
+      },
+      "fontFamily": {
+        "type": "string",
+        "default": "—",
+        "description": "Name of the variable font family."
+      },
+      "fontUrl": {
+        "type": "string",
+        "default": "URL to a .woff2 or .ttf file",
+        "description": "URL for the variable font file (needed)"
+      },
+      "flex": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Whether the characters are spaced using flex layout."
+      },
+      "scale": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, vertically scales the text to fill its container height."
+      },
+      "alpha": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, applies an opacity effect based on cursor distance."
+      },
+      "stroke": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, adds a stroke effect around characters."
+      },
+      "width": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, varies the variable-font \"width\" axis."
+      },
+      "weight": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, varies the variable-font \"weight\" axis."
+      },
+      "italic": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, varies the variable-font \"italics\" axis."
+      },
+      "textColor": {
+        "type": "string",
+        "default": "true",
+        "description": "The fill color of the text"
+      },
+      "strokeColor": {
+        "type": "string",
+        "default": "#FFFFFF",
+        "description": "The stroke color that will be applied to the text when \"stroke\" is set to true"
+      },
+      "className": {
+        "type": "string",
+        "default": "#FF0000",
+        "description": "Additional class for styling the <h1> wrapper."
+      },
+      "minFontSize": {
+        "type": "number",
+        "default": "24",
+        "description": "Sets a minimum font-size to avoid overly tiny text on smaller screens."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Fuzzy Text": {
+    "props": {
+      "children": {
+        "type": "React.ReactNode",
+        "default": "—",
+        "description": "The text content to display inside the fuzzy text component."
+      },
+      "fontSize": {
+        "type": "number | string",
+        "default": "\"clamp(2rem, 8vw, 8rem)\"",
+        "description": "Specifies the font size of the text. Accepts any valid CSS font-size value or a number (interpreted as pixels)."
+      },
+      "fontWeight": {
+        "type": "string | number",
+        "default": "900",
+        "description": "Specifies the font weight of the text."
+      },
+      "fontFamily": {
+        "type": "string",
+        "default": "\"inherit\"",
+        "description": "Specifies the font family of the text. 'inherit' uses the computed style from the parent."
+      },
+      "color": {
+        "type": "string",
+        "default": "#fff",
+        "description": "Specifies the text color."
+      },
+      "enableHover": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables the hover effect for the fuzzy text."
+      },
+      "baseIntensity": {
+        "type": "number",
+        "default": "0.18",
+        "description": "The fuzz intensity when the text is not hovered."
+      },
+      "hoverIntensity": {
+        "type": "number",
+        "default": "0.5",
+        "description": "The fuzz intensity when the text is hovered."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Gradient Text": {
+    "props": {
+      "children": {
+        "type": "ReactNode",
+        "default": "-",
+        "description": "The content to be displayed inside the gradient text."
+      },
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Adds custom classes to the root element for additional styling."
+      },
+      "colors": {
+        "type": "string[]",
+        "default": "[\"#40ffaa\", \"#4079ff\", \"#40ffaa\", \"#4079ff\", \"#40ffaa\"]",
+        "description": "Defines the gradient colors for the text or border."
+      },
+      "animationSpeed": {
+        "type": "number",
+        "default": "8",
+        "description": "The duration of the gradient animation in seconds."
+      },
+      "showBorder": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Determines whether a border with the gradient effect is displayed."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Falling Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "—",
+        "description": "The text content to display and eventually animate."
+      },
+      "highlightWords": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "List of words or substrings to apply a highlight style."
+      },
+      "highlightClass": {
+        "type": "string",
+        "default": "\"highlighted\"",
+        "description": "CSS class name for highlighted words."
+      },
+      "trigger": {
+        "type": "'click' | 'hover' | 'auto' | 'scroll'",
+        "default": "\"click\"",
+        "description": "Defines how the falling effect is activated."
+      },
+      "backgroundColor": {
+        "type": "string",
+        "default": "\"transparent\"",
+        "description": "Canvas background color for the physics world."
+      },
+      "wireframes": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to render the physics bodies in wireframe mode."
+      },
+      "gravity": {
+        "type": "number",
+        "default": "1",
+        "description": "Vertical gravity factor for the physics engine."
+      },
+      "mouseConstraintStiffness": {
+        "type": "number",
+        "default": "0.2",
+        "description": "Stiffness for the mouse drag constraint."
+      },
+      "fontSize": {
+        "type": "string",
+        "default": "\"1rem\"",
+        "description": "Font size applied to the text before it falls."
+      },
+      "wordSpacing": {
+        "type": "string",
+        "default": "\"2px\"",
+        "description": "Horizontal spacing between each word."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Text Cursor": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "⚛️",
+        "description": "The text string to display as the trail."
+      },
+      "delay": {
+        "type": "number",
+        "default": "0.01",
+        "description": "The entry stagger delay in seconds for the fade-out animation."
+      },
+      "spacing": {
+        "type": "number",
+        "default": "100",
+        "description": "The spacing in pixels between each trail point."
+      },
+      "followMouseDirection": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, each text rotates to follow the mouse direction."
+      },
+      "randomFloat": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, enables random floating offsets in position and rotation for a dynamic effect."
+      },
+      "exitDuration": {
+        "type": "number",
+        "default": "0.5",
+        "description": "The duration in seconds for the exit animation of each trail item."
+      },
+      "removalInterval": {
+        "type": "number",
+        "default": "30",
+        "description": "The interval in milliseconds between removing trail items when the mouse stops moving."
+      },
+      "maxPoints": {
+        "type": "number",
+        "default": "5",
+        "description": "The maximum number of trail points to display."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Decrypted Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "The text content to decrypt."
+      },
+      "speed": {
+        "type": "number",
+        "default": "50",
+        "description": "Time in ms between each iteration."
+      },
+      "maxIterations": {
+        "type": "number",
+        "default": "10",
+        "description": "Max # of random iterations (non-sequential mode)."
+      },
+      "sequential": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to reveal one character at a time in sequence."
+      },
+      "revealDirection": {
+        "type": "\"start\" | \"end\" | \"center\"",
+        "default": "\"start\"",
+        "description": "From which position characters begin to reveal in sequential mode."
+      },
+      "useOriginalCharsOnly": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Restrict scrambling to only the characters already in the text."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "CSS class for revealed characters."
+      },
+      "parentClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "CSS class for the main characters container."
+      },
+      "encryptedClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "CSS class for encrypted characters."
+      },
+      "animateOn": {
+        "type": "\"view\" | \"hover\"",
+        "default": "\"hover\"",
+        "description": "Trigger scrambling on hover or scroll-into-view."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "True Focus": {
+    "props": {
+      "sentence": {
+        "type": "string",
+        "default": "'True Focus'",
+        "description": "The text to display with the focus animation."
+      },
+      "manualMode": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Disables automatic animation when set to true."
+      },
+      "blurAmount": {
+        "type": "number",
+        "default": "5",
+        "description": "The amount of blur applied to non-active words."
+      },
+      "borderColor": {
+        "type": "string",
+        "default": "'green'",
+        "description": "The color of the focus borders."
+      },
+      "glowColor": {
+        "type": "string",
+        "default": "'rgba(0, 255, 0, 0.6)'",
+        "description": "The color of the glowing effect on the borders."
+      },
+      "animationDuration": {
+        "type": "number",
+        "default": "0.5",
+        "description": "The duration of the animation for each word."
+      },
+      "pauseBetweenAnimations": {
+        "type": "number",
+        "default": "1",
+        "description": "Time to pause between focusing on each word (in auto mode)."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Scroll Float": {
+    "props": {
+      "children": {
+        "type": "ReactNode",
+        "default": "—",
+        "description": "The content to animate. If a string, it will be split into individual characters."
+      },
+      "scrollContainerRef": {
+        "type": "RefObject<HTMLElement>",
+        "default": "window",
+        "description": "Optional ref to the scroll container. Defaults to window if not provided."
+      },
+      "containerClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional Tailwind classes for the container element."
+      },
+      "textClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional Tailwind classes for the text element."
+      },
+      "animationDuration": {
+        "type": "number",
+        "default": "1",
+        "description": "Duration (in seconds) of the animation."
+      },
+      "ease": {
+        "type": "string",
+        "default": "\"back.inOut(2)\"",
+        "description": "Easing function used for the animation."
+      },
+      "scrollStart": {
+        "type": "string",
+        "default": "\"center bottom+=50%\"",
+        "description": "The scroll trigger start position."
+      },
+      "scrollEnd": {
+        "type": "string",
+        "default": "\"bottom bottom-=40%\"",
+        "description": "The scroll trigger end position."
+      },
+      "stagger": {
+        "type": "number",
+        "default": "0.03",
+        "description": "Delay between the animation start of each character."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Scroll Reveal": {
+    "props": {
+      "children": {
+        "type": "ReactNode",
+        "default": "—",
+        "description": "The text or elements to be animated. If a string is provided, it will be split into words."
+      },
+      "scrollContainerRef": {
+        "type": "React.RefObject",
+        "default": "window",
+        "description": "Optional ref for the scroll container. If provided, GSAP will use this container for scroll triggers; otherwise, it defaults to the window."
+      },
+      "enableBlur": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables the blur animation effect on the words."
+      },
+      "baseOpacity": {
+        "type": "number",
+        "default": "0.1",
+        "description": "The initial opacity value for the words before the animation."
+      },
+      "baseRotation": {
+        "type": "number",
+        "default": "3",
+        "description": "The starting rotation (in degrees) for the container before it animates to 0."
+      },
+      "blurStrength": {
+        "type": "number",
+        "default": "4",
+        "description": "The strength of the blur effect (in pixels) applied at the start of the animation."
+      },
+      "containerClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional CSS class(es) to apply to the container element."
+      },
+      "textClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional CSS class(es) to apply to the text element."
+      },
+      "rotationEnd": {
+        "type": "string",
+        "default": "\"bottom bottom\"",
+        "description": "The scroll trigger end point for the container rotation animation."
+      },
+      "wordAnimationEnd": {
+        "type": "string",
+        "default": "\"bottom bottom\"",
+        "description": "The scroll trigger end point for the word opacity and blur animations. The animation will complete when the bottom of the text reaches the bottom of the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "ASCII Text": {
+    "props": {
+      "text": {
+        "type": "string",
+        "default": "\"Hello World!\"",
+        "description": "The text displayed on the plane in the ASCII scene."
+      },
+      "enableWaves": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If false, disables the wavy text animation."
+      },
+      "asciiFontSize": {
+        "type": "number",
+        "default": "12",
+        "description": "Size of the ASCII glyphs in the overlay."
+      },
+      "textFontSize": {
+        "type": "number",
+        "default": "200",
+        "description": "Pixel size for the text that’s drawn onto the plane texture."
+      },
+      "planeBaseHeight": {
+        "type": "number",
+        "default": "8",
+        "description": "How tall the plane is in 3D. The plane width is auto-based on text aspect."
+      },
+      "textColor": {
+        "type": "string",
+        "default": "#fdf9f3",
+        "description": "The color of the text drawn onto the plane texture."
+      },
+      "strokeColor": {
+        "type": "string",
+        "default": "N/A",
+        "description": "Not used here, but you could add it if you want an outline effect."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Rotating Text": {
+    "props": {
+      "texts": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "An array of text strings to be rotated."
+      },
+      "rotationInterval": {
+        "type": "number",
+        "default": "2000",
+        "description": "The interval (in milliseconds) between text rotations."
+      },
+      "initial": {
+        "type": "object",
+        "default": "{ y: \"100%\", opacity: 0 }",
+        "description": "Initial animation state for each element."
+      },
+      "animate": {
+        "type": "object",
+        "default": "{ y: 0, opacity: 1 }",
+        "description": "Animation state when elements enter."
+      },
+      "exit": {
+        "type": "object",
+        "default": "{ y: \"-120%\", opacity: 0 }",
+        "description": "Exit animation state for elements."
+      },
+      "animatePresenceMode": {
+        "type": "string",
+        "default": "\"wait\"",
+        "description": "Mode for AnimatePresence; for example, 'wait' to finish exit animations before entering."
+      },
+      "animatePresenceInitial": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Determines whether the AnimatePresence component should run its initial animation."
+      },
+      "staggerDuration": {
+        "type": "number",
+        "default": "0",
+        "description": "Delay between each character's animation."
+      },
+      "staggerFrom": {
+        "type": "string",
+        "default": "\"first\"",
+        "description": "Specifies the order from which the stagger starts."
+      },
+      "transition": {
+        "type": "object",
+        "default": "—",
+        "description": "Transition settings for the animations."
+      },
+      "loop": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Determines if the rotation should loop back to the first text after the last one."
+      },
+      "auto": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, the text rotation starts automatically."
+      },
+      "splitBy": {
+        "type": "string",
+        "default": "\"characters\"",
+        "description": "Determines how the text is split into animatable elements (e.g., by characters, words, or lines)."
+      },
+      "onNext": {
+        "type": "function",
+        "default": "undefined",
+        "description": "Callback function invoked when the text rotates to the next item."
+      },
+      "mainClassName": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional class names for the main container element."
+      },
+      "splitLevelClassName": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional class names for the container wrapping each split group (e.g., a word)."
+      },
+      "elementLevelClassName": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional class names for each individual animated element."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Glitch Text": {
+    "props": {
+      "children": {
+        "type": "string",
+        "default": "—",
+        "description": "The text content that will display the glitch effect."
+      },
+      "speed": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Multiplier for the animation speed. Higher values slow down the glitch effect."
+      },
+      "enableShadows": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggle the colored text shadows on the glitch pseudo-elements."
+      },
+      "enableOnHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, the glitch animation is only activated on hover."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Additional custom classes to apply to the component."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Scroll Velocity": {
+    "props": {
+      "scrollContainerRef": {
+        "type": "React.RefObject<HTMLElement>",
+        "default": "undefined",
+        "description": "Optional ref for a custom scroll container to track scroll position."
+      },
+      "texts": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "Array of strings to display as scrolling text."
+      },
+      "velocity": {
+        "type": "number",
+        "default": "100",
+        "description": "Base velocity for scrolling; sign is flipped for odd indexed texts."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "CSS class applied to each text copy (span)."
+      },
+      "damping": {
+        "type": "number",
+        "default": "50",
+        "description": "Damping value for the spring animation."
+      },
+      "stiffness": {
+        "type": "number",
+        "default": "400",
+        "description": "Stiffness value for the spring animation."
+      },
+      "numCopies": {
+        "type": "number",
+        "default": "6",
+        "description": "Number of copies of the text rendered for a continuous scrolling effect."
+      },
+      "velocityMapping": {
+        "type": "{ input: number[]; output: number[] }",
+        "default": "{ input: [0, 1000], output: [0, 5] }",
+        "description": "Mapping from scroll velocity to a movement multiplier for dynamic scrolling."
+      },
+      "parallaxClassName": {
+        "type": "string",
+        "default": "\"parallax\"",
+        "description": "CSS class for the parallax container."
+      },
+      "scrollerClassName": {
+        "type": "string",
+        "default": "\"scroller\"",
+        "description": "CSS class for the scroller container."
+      },
+      "parallaxStyle": {
+        "type": "React.CSSProperties",
+        "default": "undefined",
+        "description": "Inline styles for the parallax container."
+      },
+      "scrollerStyle": {
+        "type": "React.CSSProperties",
+        "default": "undefined",
+        "description": "Inline styles for the scroller container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Variable Proximity": {
+    "props": {
+      "label": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "The text content to display."
+      },
+      "fromFontVariationSettings": {
+        "type": "string",
+        "default": "'wght' 400, 'opsz' 9",
+        "description": "The starting variation settings."
+      },
+      "toFontVariationSettings": {
+        "type": "string",
+        "default": "'wght' 800, 'opsz' 40",
+        "description": "The variation settings to reach at cursor proximity."
+      },
+      "containerRef": {
+        "type": "RefObject<HTMLDivElement>",
+        "default": "undefined",
+        "description": "Reference to container for relative calculations."
+      },
+      "radius": {
+        "type": "number",
+        "default": "50",
+        "description": "Proximity radius to influence the effect."
+      },
+      "falloff": {
+        "type": "'linear' | 'exponential' | 'gaussian'",
+        "default": "\"linear\"",
+        "description": "Type of falloff for the effect."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Count Up": {
+    "props": {
+      "to": {
+        "type": "number",
+        "default": "—",
+        "description": "The target number to count up to."
+      },
+      "from": {
+        "type": "number",
+        "default": "0",
+        "description": "The initial number from which the count starts."
+      },
+      "direction": {
+        "type": "string",
+        "default": "\"up\"",
+        "description": "Direction of the count; can be \"up\" or \"down\". When this is set to \"down\", \"from\" and \"to\" become reversed, in order to count down."
+      },
+      "delay": {
+        "type": "number",
+        "default": "0",
+        "description": "Delay in seconds before the counting starts."
+      },
+      "duration": {
+        "type": "number",
+        "default": "2",
+        "description": "Duration of the count animation - based on the damping and stiffness configured inside the component."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "CSS class to apply to the component for additional styling."
+      },
+      "startWhen": {
+        "type": "boolean",
+        "default": "true",
+        "description": "A boolean to control whether the animation should start when the component is in view. It basically works like an if statement, if this is true, the count will start."
+      },
+      "separator": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Character to use as a thousands separator in the displayed number."
+      },
+      "onStart": {
+        "type": "function",
+        "default": "—",
+        "description": "Callback function that is called when the count animation starts."
+      },
+      "onEnd": {
+        "type": "function",
+        "default": "—",
+        "description": "Callback function that is called when the count animation ends."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Animated Content": {
+    "props": {
+      "direction": {
+        "type": "string",
+        "default": "vertical",
+        "description": "Specifies the direction of the animation. Can be either \"vertical\" or \"horizontal\"."
+      },
+      "distance": {
+        "type": "number",
+        "default": "—",
+        "description": "Defines the distance (in pixels) the component moves during the animation."
+      },
+      "delay": {
+        "type": "number",
+        "default": "—",
+        "description": "Adds a delay in milliseconds before triggering the animation."
+      },
+      "reverse": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Determines whether the animation moves in the reverse direction."
+      },
+      "initialOpacity": {
+        "type": "number",
+        "default": "—",
+        "description": "Sets the initial opacity of the component before the animation begins."
+      },
+      "animateOpacity": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Enables or disables the opacity animation during the transition."
+      },
+      "scale": {
+        "type": "number",
+        "default": "—",
+        "description": "Sets the initial scale of the component for scaling animations."
+      },
+      "config": {
+        "type": "object",
+        "default": "{ tension: 50, friction: 25 }",
+        "description": "Configures the spring animation with tension and friction values."
+      },
+      "threshold": {
+        "type": "number",
+        "default": "—",
+        "description": "Defines the intersection threshold (percentage of visibility) required to trigger the animation."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Fade Content": {
+    "props": {
+      "blur": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Enables a blur effect during the animation."
+      },
+      "duration": {
+        "type": "number",
+        "default": "—",
+        "description": "Specifies the duration of the fade animation in milliseconds."
+      },
+      "delay": {
+        "type": "number",
+        "default": "0",
+        "description": "Adds a delay in milliseconds before triggering the animation."
+      },
+      "easing": {
+        "type": "string",
+        "default": "ease-out",
+        "description": "Defines the easing function for the fade transition."
+      },
+      "threshold": {
+        "type": "number",
+        "default": "—",
+        "description": "IntersectionObserver threshold for triggering the fade animation."
+      },
+      "initialOpacity": {
+        "type": "number",
+        "default": "—",
+        "description": "The starting opacity of the component before it enters the viewport."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class(es) to be added to the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Pixel Transition": {
+    "props": {
+      "firstContent": {
+        "type": "ReactNode | string",
+        "default": "—",
+        "description": "Content to show by default (e.g., an <img> or text)."
+      },
+      "secondContent": {
+        "type": "ReactNode | string",
+        "default": "—",
+        "description": "Content revealed upon hover or click."
+      },
+      "gridSize": {
+        "type": "number",
+        "default": "7",
+        "description": "Number of rows/columns in the pixel grid."
+      },
+      "pixelColor": {
+        "type": "string",
+        "default": "currentColor",
+        "description": "Background color used for each pixel block."
+      },
+      "animationStepDuration": {
+        "type": "number",
+        "default": "0.3",
+        "description": "Length of the pixel reveal/hide in seconds."
+      },
+      "aspectRatio": {
+        "type": "string",
+        "default": "\"100%\"",
+        "description": "Sets the 'padding-top' (or aspect-ratio) for the container."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Optional additional class names for styling."
+      },
+      "style": {
+        "type": "object",
+        "default": "{}",
+        "description": "Optional inline styles for the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Magnet Lines": {
+    "props": {
+      "rows": {
+        "type": "number",
+        "default": "9",
+        "description": "Number of grid rows."
+      },
+      "columns": {
+        "type": "number",
+        "default": "9",
+        "description": "Number of grid columns."
+      },
+      "containerSize": {
+        "type": "string",
+        "default": "80vmin",
+        "description": "Specifies the width and height of the entire grid container."
+      },
+      "lineColor": {
+        "type": "string",
+        "default": "#efefef",
+        "description": "Color for each line (the <span> elements)."
+      },
+      "lineWidth": {
+        "type": "string",
+        "default": "1vmin",
+        "description": "Specifies each line’s thickness."
+      },
+      "lineHeight": {
+        "type": "string",
+        "default": "6vmin",
+        "description": "Specifies each line’s length."
+      },
+      "baseAngle": {
+        "type": "number",
+        "default": "-10",
+        "description": "Initial rotation angle (in degrees) before pointer movement."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Additional class name(s) applied to the container."
+      },
+      "style": {
+        "type": "object",
+        "default": "{}",
+        "description": "Inline styles for the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Click Spark": {
+    "props": {
+      "sparkColor": {
+        "type": "string",
+        "default": "'#f00'",
+        "description": "Color of each spark line."
+      },
+      "sparkSize": {
+        "type": "number",
+        "default": "—",
+        "description": "Initial length of each spark line."
+      },
+      "sparkRadius": {
+        "type": "number",
+        "default": "—",
+        "description": "How far sparks travel from the click center."
+      },
+      "sparkCount": {
+        "type": "number",
+        "default": "—",
+        "description": "Number of spark lines that appear on each click."
+      },
+      "duration": {
+        "type": "number",
+        "default": "—",
+        "description": "Animation duration in milliseconds."
+      },
+      "easing": {
+        "type": "string",
+        "default": "'ease-out'",
+        "description": "Easing function used for the spark animation."
+      },
+      "extraScale": {
+        "type": "number",
+        "default": "—",
+        "description": "Additional multiplier for spark distance."
+      },
+      "children": {
+        "type": "React.ReactNode",
+        "default": "—",
+        "description": "React children to render."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Magnet": {
+    "props": {
+      "padding": {
+        "type": "number",
+        "default": "—",
+        "description": "Specifies the distance (in pixels) around the element that activates the magnet pull."
+      },
+      "disabled": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Disables the magnet effect when set to true."
+      },
+      "magnetStrength": {
+        "type": "number",
+        "default": "—",
+        "description": "Controls the strength of the pull; higher values reduce movement, lower values increase it."
+      },
+      "activeTransition": {
+        "type": "string",
+        "default": "\"transform 0.3s ease-out\"",
+        "description": "CSS transition applied to the element when the magnet is active."
+      },
+      "inactiveTransition": {
+        "type": "string",
+        "default": "\"transform 0.5s ease-in-out\"",
+        "description": "CSS transition applied when the magnet is inactive (mouse out of range)."
+      },
+      "wrapperClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Optional CSS class name for the outermost wrapper element."
+      },
+      "innerClassName": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Optional CSS class name for the moving (inner) element."
+      },
+      "children": {
+        "type": "ReactNode",
+        "default": "—",
+        "description": "The content (JSX) to be displayed inside the magnetized element."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Pixel Trail": {
+    "props": {
+      "gridSize": {
+        "type": "number",
+        "default": "40",
+        "description": "Number of pixels in grid."
+      },
+      "trailSize": {
+        "type": "number",
+        "default": "0.1",
+        "description": "Size of each trail dot."
+      },
+      "maxAge": {
+        "type": "number",
+        "default": "500",
+        "description": "Duration of the trail effect."
+      },
+      "interpolate": {
+        "type": "number",
+        "default": "5",
+        "description": "Interpolation factor for pointer movement."
+      },
+      "color": {
+        "type": "string",
+        "default": "#ffffff",
+        "description": "Pixel color."
+      },
+      "gooeyFilter": {
+        "type": "object",
+        "default": "{ id: 'custom-goo-filter', strength: 5 }",
+        "description": "Configuration for gooey filter."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Metallic Paint": {
+    "props": {
+      "imageData": {
+        "type": "ImageData",
+        "default": "none (required)",
+        "description": "The processed image data generated from parseLogoImage. This image data is used by the shader to create the liquid paper effect."
+      },
+      "params": {
+        "type": "ShaderParams",
+        "default": "—",
+        "description": "An object to configure the shader effect. Properties include: patternScale, refraction, edge, patternBlur, liquid, speed"
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Noise": {
+    "props": {
+      "patternSize": {
+        "type": "number",
+        "default": "—",
+        "description": "Defines the size of the grain pattern."
+      },
+      "patternScaleX": {
+        "type": "number",
+        "default": "—",
+        "description": "Scaling factor for the X-axis of the grain pattern."
+      },
+      "patternScaleY": {
+        "type": "number",
+        "default": "—",
+        "description": "Scaling factor for the Y-axis of the grain pattern."
+      },
+      "patternRefreshInterval": {
+        "type": "number",
+        "default": "—",
+        "description": "Number of frames before the grain pattern refreshes."
+      },
+      "patternAlpha": {
+        "type": "number",
+        "default": "—",
+        "description": "Opacity of the grain pattern (0-255)."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Crosshair": {
+    "props": {},
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Image Trail": {
+    "props": {
+      "items": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "An array of image URLs which will be animated in the trail."
+      },
+      "variant": {
+        "type": "number",
+        "default": "1",
+        "description": "A number from 1 to 8 - all different animation styles."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Ribbons": {
+    "props": {
+      "colors": {
+        "type": "string[]",
+        "default": "['#00d8ff']",
+        "description": "An array of color strings to be used for the ribbons."
+      },
+      "baseSpring": {
+        "type": "number",
+        "default": "0.03",
+        "description": "Base spring factor for the physics controlling ribbon motion."
+      },
+      "baseFriction": {
+        "type": "number",
+        "default": "0.9",
+        "description": "Base friction factor that dampens the ribbon motion."
+      },
+      "baseThickness": {
+        "type": "number",
+        "default": "30",
+        "description": "The base thickness of the ribbons."
+      },
+      "offsetFactor": {
+        "type": "number",
+        "default": "0.02",
+        "description": "A factor to horizontally offset the starting positions of the ribbons."
+      },
+      "maxAge": {
+        "type": "number",
+        "default": "500",
+        "description": "Delay in milliseconds controlling how long the ribbon trails extend."
+      },
+      "pointCount": {
+        "type": "number",
+        "default": "50",
+        "description": "The number of points that make up each ribbon."
+      },
+      "speedMultiplier": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Multiplier that adjusts how fast trailing points interpolate towards the head."
+      },
+      "enableFade": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, a fade effect is applied along the length of the ribbon."
+      },
+      "enableShaderEffect": {
+        "type": "boolean",
+        "default": "true",
+        "description": "If true, an additional sine-wave shader effect is applied to the ribbons."
+      },
+      "effectAmplitude": {
+        "type": "number",
+        "default": "2",
+        "description": "The amplitude of the shader displacement effect."
+      },
+      "backgroundColor": {
+        "type": "number[]",
+        "default": "[0, 0, 0, 0]",
+        "description": "An RGBA array specifying the clear color for the renderer."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Splash Cursor": {
+    "props": {
+      "SIM_RESOLUTION": {
+        "type": "number",
+        "default": "—",
+        "description": "Fluid simulation resolution for velocity fields."
+      },
+      "DYE_RESOLUTION": {
+        "type": "number",
+        "default": "—",
+        "description": "Resolution of the color/dye texture."
+      },
+      "CAPTURE_RESOLUTION": {
+        "type": "number",
+        "default": "—",
+        "description": "Resolution used for certain capture operations (rarely changed)."
+      },
+      "DENSITY_DISSIPATION": {
+        "type": "number",
+        "default": "—",
+        "description": "Rate at which color/density dissipates over time."
+      },
+      "VELOCITY_DISSIPATION": {
+        "type": "number",
+        "default": "—",
+        "description": "Rate at which velocity dissipates over time."
+      },
+      "PRESSURE": {
+        "type": "number",
+        "default": "—",
+        "description": "Base pressure for the fluid simulation."
+      },
+      "PRESSURE_ITERATIONS": {
+        "type": "number",
+        "default": "—",
+        "description": "Number of Jacobi iterations used for the pressure solver."
+      },
+      "CURL": {
+        "type": "number",
+        "default": "—",
+        "description": "Amount of vorticity/curl to apply for swirling effects."
+      },
+      "SPLAT_RADIUS": {
+        "type": "number",
+        "default": "—",
+        "description": "Radius of the 'splat' effect when user interacts."
+      },
+      "SPLAT_FORCE": {
+        "type": "number",
+        "default": "—",
+        "description": "Force of the fluid 'splat' on each interaction."
+      },
+      "SHADING": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Toggles simple lighting/shading on the fluid."
+      },
+      "COLOR_UPDATE_SPEED": {
+        "type": "number",
+        "default": "—",
+        "description": "Frequency at which pointer colors are re-randomized."
+      },
+      "BACK_COLOR": {
+        "type": "object",
+        "default": "{ r: 0.5, g: 0, b: 0 }",
+        "description": "Base background color for the fluid. Not always used if TRANSPARENT is true."
+      },
+      "TRANSPARENT": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Determines if the canvas background should be rendered with alpha."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Meta Balls": {
+    "props": {
+      "color": {
+        "type": "string",
+        "default": "#ffffff",
+        "description": "The base color of the metaballs."
+      },
+      "speed": {
+        "type": "number",
+        "default": "0.3",
+        "description": "Speed multiplier for the animation."
+      },
+      "enableMouseInteraction": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables or disables the ball following the mouse."
+      },
+      "enableTransparency": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Enables or disables transparency for the container of the animation."
+      },
+      "hoverSmoothness": {
+        "type": "number",
+        "default": "0.05",
+        "description": "Smoothness factor for the cursor ball when following the mouse."
+      },
+      "animationSize": {
+        "type": "number",
+        "default": "30",
+        "description": "The size of the world for the animation."
+      },
+      "ballCount": {
+        "type": "number",
+        "default": "15",
+        "description": "Number of metaballs rendered."
+      },
+      "clumpFactor": {
+        "type": "number",
+        "default": "1",
+        "description": "Determines how close together the balls are rendered."
+      },
+      "cursorBallSize": {
+        "type": "number",
+        "default": "3",
+        "description": "Size of the cursor-controlled ball."
+      },
+      "cursorBallColor": {
+        "type": "string",
+        "default": "#ff0000",
+        "description": "Color of the cursor ball."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Follow Cursor": {
+    "props": {
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional CSS class names to apply to the container."
+      },
+      "animationConfig": {
+        "type": "object",
+        "default": "{ mass: 5, tension: 350, friction: 40 }",
+        "description": "Configuration object for react-spring animations."
+      },
+      "hoverScale": {
+        "type": "number",
+        "default": "1.1",
+        "description": "Scale factor when hovering over the component."
+      },
+      "offsetX": {
+        "type": "number",
+        "default": "20",
+        "description": "Horizontal offset for the cursor following effect."
+      },
+      "cardWidth": {
+        "type": "string",
+        "default": "'200px'",
+        "description": "Width of the card element."
+      },
+      "rotationFactor": {
+        "type": "number",
+        "default": "20",
+        "description": "Factor determining the rotation effect based on cursor position."
+      },
+      "perspective": {
+        "type": "string",
+        "default": "'300px'",
+        "description": "CSS perspective value for 3D transformations."
+      },
+      "zoomSensitivity": {
+        "type": "number",
+        "default": "200",
+        "description": "Sensitivity for zoom interactions via wheel or pinch gestures."
+      },
+      "wheelConfig": {
+        "type": "object",
+        "default": "{ mass: 1, tension: 200, friction: 30 }",
+        "description": "Configuration object for wheel-related animations."
+      },
+      "enableTilt": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enable or disable the tilt effect based on cursor movement."
+      },
+      "enableZoom": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enable or disable zoom interactions."
+      },
+      "enableDrag": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enable or disable drag interactions on mobile devices."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Blob Cursor": {
+    "props": {},
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Star Border": {
+    "props": {
+      "as": {
+        "type": "string",
+        "default": "button",
+        "description": "Allows specifying the type of the parent component to be rendered."
+      },
+      "className": {
+        "type": "string",
+        "default": "-",
+        "description": "Allows adding custom classes to the component."
+      },
+      "color": {
+        "type": "string",
+        "default": "white",
+        "description": "Changes the main color of the border (fades to transparent)"
+      },
+      "speed": {
+        "type": "string",
+        "default": "6s",
+        "description": "Changes the speed of the animation."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Animated List": {
+    "props": {
+      "items": {
+        "type": "string[]",
+        "default": "['Item 1', 'Item 2', ...]",
+        "description": "An array of items to display in the scrollable list."
+      },
+      "onItemSelect": {
+        "type": "function",
+        "default": "undefined",
+        "description": "Callback function triggered when an item is selected. Receives the selected item and its index."
+      },
+      "showGradients": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggle to display the top and bottom gradient overlays."
+      },
+      "enableArrowNavigation": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggle to enable keyboard navigation via arrow and tab keys."
+      },
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional CSS class names for the main container."
+      },
+      "itemClassName": {
+        "type": "string",
+        "default": "''",
+        "description": "Additional CSS class names for each list item."
+      },
+      "displayScrollbar": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggle to display or hide the custom scrollbar."
+      },
+      "initialSelectedIndex": {
+        "type": "number",
+        "default": "-1",
+        "description": "Initial index of the selected item. Set to -1 for no selection."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Stack": {
+    "props": {
+      "randomRotation": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Applies a random rotation to each card for a 'messy' look."
+      },
+      "sensitivity": {
+        "type": "number",
+        "default": "—",
+        "description": "Drag sensitivity for sending a card to the back."
+      },
+      "cardDimensions": {
+        "type": "object",
+        "default": "{ width: 208, height: 208 }",
+        "description": "Defines the width and height of the cards."
+      },
+      "sendToBackOnClick": {
+        "type": "boolean",
+        "default": "false",
+        "description": "When enabled, the also stack shifts to the next card on click."
+      },
+      "cardsData": {
+        "type": "array",
+        "default": "[]",
+        "description": "The array of card data, including `id` and `img` properties."
+      },
+      "animationConfig": {
+        "type": "object",
+        "default": "{ stiffness: 260, damping: 20 }",
+        "description": "Configures the spring animation's stiffness and damping."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Tilted Card": {
+    "props": {
+      "imageSrc": {
+        "type": "string",
+        "default": "N/A",
+        "description": "The source URL of the image."
+      },
+      "altText": {
+        "type": "string",
+        "default": "Tilted card image",
+        "description": "Alternative text for the image."
+      },
+      "captionText": {
+        "type": "string",
+        "default": "—",
+        "description": "Text for the tooltip caption."
+      },
+      "containerHeight": {
+        "type": "string",
+        "default": "600px",
+        "description": "Height of the overall card container."
+      },
+      "containerWidth": {
+        "type": "string",
+        "default": "100%",
+        "description": "Width of the overall card container."
+      },
+      "imageHeight": {
+        "type": "string",
+        "default": "300px",
+        "description": "Height of the inner image."
+      },
+      "imageWidth": {
+        "type": "string",
+        "default": "300px",
+        "description": "Width of the inner image."
+      },
+      "scaleOnHover": {
+        "type": "number",
+        "default": "1.1",
+        "description": "Scaling factor applied on hover."
+      },
+      "rotateAmplitude": {
+        "type": "number",
+        "default": "14",
+        "description": "Controls how much the card tilts with mouse movement."
+      },
+      "showMobileWarning": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Whether to show a small alert about mobile usage."
+      },
+      "showTooltip": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggles the visibility of the tooltip (figcaption)."
+      },
+      "displayOverlayContent": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to display any overlayContent on top of the image."
+      },
+      "overlayContent": {
+        "type": "ReactNode",
+        "default": "null",
+        "description": "A React node to display as an overlay on the card."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Folder": {
+    "props": {
+      "color": {
+        "type": "string",
+        "default": "#00d8ff",
+        "description": "The primary color of the folder."
+      },
+      "size": {
+        "type": "number",
+        "default": "1",
+        "description": "Scale factor for the folder size."
+      },
+      "items": {
+        "type": "React.ReactNode[]",
+        "default": "[]",
+        "description": "An array of up to 3 items rendered as papers in the folder."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Additional CSS classes for the folder container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Lanyard": {
+    "props": {
+      "position": {
+        "type": "array",
+        "default": "[0, 0, 30]",
+        "description": "Initial camera position for the canvas."
+      },
+      "gravity": {
+        "type": "array",
+        "default": "[0, -40, 0]",
+        "description": "Gravity vector for the physics simulation."
+      },
+      "fov": {
+        "type": "number",
+        "default": "20",
+        "description": "Camera field of view."
+      },
+      "transparent": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables a transparent background for the canvas."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Dock": {
+    "props": {
+      "items": {
+        "type": "DockItemData[]",
+        "default": "[]",
+        "description": "Array of dock items. Each item should include an icon, label, onClick handler, and an optional className."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional CSS classes for the dock panel."
+      },
+      "distance": {
+        "type": "number",
+        "default": "200",
+        "description": "Pixel distance used to calculate the magnification effect based on mouse proximity."
+      },
+      "panelHeight": {
+        "type": "number",
+        "default": "68",
+        "description": "Height (in pixels) of the dock panel."
+      },
+      "baseItemSize": {
+        "type": "number",
+        "default": "50",
+        "description": "The base size (in pixels) for each dock item."
+      },
+      "dockHeight": {
+        "type": "number",
+        "default": "256",
+        "description": "Maximum height (in pixels) of the dock container."
+      },
+      "magnification": {
+        "type": "number",
+        "default": "70",
+        "description": "The magnified size (in pixels) applied to a dock item when hovered."
+      },
+      "spring": {
+        "type": "SpringOptions",
+        "default": "{ mass: 0.1, stiffness: 150, damping: 12 }",
+        "description": "Configuration options for the spring animation."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Gooey Nav": {
+    "props": {
+      "items": {
+        "type": "GooeyNavItem[]",
+        "default": "[]",
+        "description": "Array of navigation items."
+      },
+      "animationTime": {
+        "type": "number",
+        "default": "600",
+        "description": "Duration (ms) of the main animation."
+      },
+      "particleCount": {
+        "type": "number",
+        "default": "15",
+        "description": "Number of bubble particles per transition."
+      },
+      "particleDistances": {
+        "type": "[number, number]",
+        "default": "[90, 10]",
+        "description": "Outer and inner distances of bubble spread."
+      },
+      "particleR": {
+        "type": "number",
+        "default": "100",
+        "description": "Radius factor influencing random particle rotation."
+      },
+      "timeVariance": {
+        "type": "number",
+        "default": "300",
+        "description": "Random time variance (ms) for particle animations."
+      },
+      "colors": {
+        "type": "number[]",
+        "default": "[1, 2, 3, 1, 2, 3, 1, 4]",
+        "description": "Color indices used when creating bubble particles."
+      },
+      "initialActiveIndex": {
+        "type": "number",
+        "default": "0",
+        "description": "Which item is selected on mount."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Masonry": {
+    "props": {},
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Pixel Card": {
+    "props": {
+      "variant": {
+        "type": "string",
+        "default": "\"default\"",
+        "description": "Defines the color scheme and animation style."
+      },
+      "gap": {
+        "type": "number",
+        "default": "varies by variant",
+        "description": "Pixel grid gap size in pixels."
+      },
+      "speed": {
+        "type": "number",
+        "default": "varies by variant",
+        "description": "Animation speed modifier (lower is slower)."
+      },
+      "colors": {
+        "type": "string",
+        "default": "\"#f8fafc,#f1f5f9,#cbd5e1\"",
+        "description": "Comma-separated list of colors for the pixel effect."
+      },
+      "noFocus": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, prevents animation from triggering on focus."
+      },
+      "className": {
+        "type": "string",
+        "default": "\"\"",
+        "description": "Additional CSS class for the wrapper."
+      },
+      "style": {
+        "type": "object",
+        "default": "{}",
+        "description": "Inline styles for the wrapper."
+      },
+      "children": {
+        "type": "ReactNode",
+        "default": "null",
+        "description": "Content to render inside the pixel effect container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Circular Gallery": {
+    "props": {
+      "items": {
+        "type": "Array<{ image: string; text: string }>",
+        "default": "undefined",
+        "description": "List of items to display in the gallery. Each item should have an image URL and a text label."
+      },
+      "bend": {
+        "type": "number",
+        "default": "3",
+        "description": "Determines the curvature of the gallery layout. A negative value bends in one direction, a positive value in the opposite."
+      },
+      "textColor": {
+        "type": "string",
+        "default": "\"#ffffff\"",
+        "description": "Specifies the color of the text labels."
+      },
+      "borderRadius": {
+        "type": "number",
+        "default": "0.05",
+        "description": "Sets the border radius for the media items to achieve rounded corners."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Carousel": {
+    "props": {
+      "items": {
+        "type": "CarouselItem[]",
+        "default": "DEFAULT_ITEMS",
+        "description": "An array of carousel items. Each item must include title, description, id, and icon."
+      },
+      "baseWidth": {
+        "type": "number",
+        "default": "300",
+        "description": "Total width (in px) of the carousel container. Effective item width is baseWidth minus padding."
+      },
+      "autoplay": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Enables automatic scrolling to the next item at a fixed interval."
+      },
+      "autoplayDelay": {
+        "type": "number",
+        "default": "3000",
+        "description": "Delay in milliseconds between automatic scrolls when autoplay is enabled."
+      },
+      "pauseOnHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Pauses the autoplay functionality when the carousel is hovered."
+      },
+      "loop": {
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, the carousel loops seamlessly from the last item back to the first."
+      },
+      "round": {
+        "type": "boolean",
+        "default": "true",
+        "description": "When true, the carousel is rendered with a 1:1 aspect ratio and circular container/items."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Spotlight Card": {
+    "props": {
+      "spotlightColor": {
+        "type": "string",
+        "default": "rgba(255, 255, 255, 0.25)",
+        "description": "Controls the color of the radial gradient used for the spotlight effect."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Allows adding custom classes to the component."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Flying Posters": {
+    "props": {
+      "items": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "An array of image URLs to be displayed as flying posters."
+      },
+      "planeWidth": {
+        "type": "number",
+        "default": "320",
+        "description": "The width of each poster plane in pixels."
+      },
+      "planeHeight": {
+        "type": "number",
+        "default": "320",
+        "description": "The height of each poster plane in pixels."
+      },
+      "distortion": {
+        "type": "number",
+        "default": "3",
+        "description": "The amount of distortion applied to the posters' movement."
+      },
+      "scrollEase": {
+        "type": "number",
+        "default": "0.01",
+        "description": "The easing factor for smooth scrolling interactions."
+      },
+      "cameraFov": {
+        "type": "number",
+        "default": "45",
+        "description": "The field of view for the camera in degrees."
+      },
+      "cameraZ": {
+        "type": "number",
+        "default": "20",
+        "description": "The Z position of the camera, affecting zoom and perspective."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Infinite Scroll": {
+    "props": {
+      "width": {
+        "type": "string",
+        "default": "\"30rem\"",
+        "description": "Width of the outer wrapper."
+      },
+      "maxHeight": {
+        "type": "string",
+        "default": "\"100%\"",
+        "description": "Maximum height of the outer wrapper."
+      },
+      "items": {
+        "type": "array",
+        "default": "[]",
+        "description": "Array of items with custom content. Each item should have a 'content' property containing a string or React node."
+      },
+      "itemMinHeight": {
+        "type": "number",
+        "default": "150",
+        "description": "Fixed height for each item in pixels."
+      },
+      "isTilted": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether the container has a skewed perspective."
+      },
+      "tiltDirection": {
+        "type": "\"left\" | \"right\"",
+        "default": "\"left\"",
+        "description": "Direction of the tilt if 'isTilted' is true."
+      },
+      "autoplay": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether the scroll should autoplay."
+      },
+      "autoplaySpeed": {
+        "type": "number",
+        "default": "20",
+        "description": "Speed of autoplay in pixels/frame."
+      },
+      "autoplayDirection": {
+        "type": "\"up\" | \"down\"",
+        "default": "\"down\"",
+        "description": "Direction of autoplay scrolling."
+      },
+      "pauseOnHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Pause autoplay when hovering over the component."
+      },
+      "negativeMargin": {
+        "type": "string",
+        "default": "\"-0.5em\"",
+        "description": "Negative margin to reduce spacing between items."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Glass Icons": {
+    "props": {
+      "items": {
+        "type": "GlassIconsItem[]",
+        "default": "[]",
+        "description": "Array of items to render. Each item should include: an icon (React.ReactElement), a color (string), a label (string), and an optional customClass (string)."
+      },
+      "className": {
+        "type": "string",
+        "default": "''",
+        "description": "Optional additional CSS class(es) to be added to the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Decay Card": {
+    "props": {
+      "children": {
+        "type": "ReactNode",
+        "default": "—",
+        "description": "The content (JSX) to be rendered inside the card."
+      },
+      "width": {
+        "type": "number",
+        "default": "200",
+        "description": "The width of the card in pixels."
+      },
+      "height": {
+        "type": "number",
+        "default": "300",
+        "description": "The height of the card in pixels."
+      },
+      "image": {
+        "type": "string",
+        "default": "—",
+        "description": "Allows setting the background image of the card."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Flowing Menu": {
+    "props": {
+      "items": {
+        "type": "object[]",
+        "default": "[]",
+        "description": "An array of object scontaining: link, text, image."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Elastic Slider": {
+    "props": {
+      "defaultValue": {
+        "type": "number",
+        "default": "—",
+        "description": "The initial value of the slider. It can be less than startingValue or greater than maxValue."
+      },
+      "startingValue": {
+        "type": "number",
+        "default": "—",
+        "description": "The starting point for the slider's range, e.g., startingValue=100 allows the slider to start at 100."
+      },
+      "maxValue": {
+        "type": "number",
+        "default": "—",
+        "description": "The maximum value the slider can reach."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Allows passing custom class names to style the component."
+      },
+      "isStepped": {
+        "type": "boolean",
+        "default": "—",
+        "description": "Enables or disables stepped increments on the slider."
+      },
+      "stepSize": {
+        "type": "number",
+        "default": "—",
+        "description": "The size of the increments for the slider when isStepped is enabled."
+      },
+      "leftIcon": {
+        "type": "JSX.Element",
+        "default": "<>-</>",
+        "description": "Custom JSX or HTML code to display on the left side of the slider."
+      },
+      "rightIcon": {
+        "type": "JSX.Element",
+        "default": "<>+</>",
+        "description": "Custom JSX or HTML code to display on the right side of the slider."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Counter": {
+    "props": {
+      "value": {
+        "type": "number",
+        "default": "N/A (required)",
+        "description": "The numeric value to display in the counter."
+      },
+      "fontSize": {
+        "type": "number",
+        "default": "100",
+        "description": "The base font size used for the counter digits."
+      },
+      "padding": {
+        "type": "number",
+        "default": "0",
+        "description": "Additional padding added to the digit height."
+      },
+      "places": {
+        "type": "number[]",
+        "default": "[100, 10, 1]",
+        "description": "An array of place values to determine which digits to display."
+      },
+      "gap": {
+        "type": "number",
+        "default": "8",
+        "description": "The gap (in pixels) between each digit."
+      },
+      "borderRadius": {
+        "type": "number",
+        "default": "4",
+        "description": "The border radius (in pixels) for the counter container."
+      },
+      "horizontalPadding": {
+        "type": "number",
+        "default": "8",
+        "description": "The horizontal padding (in pixels) for the counter container."
+      },
+      "textColor": {
+        "type": "string",
+        "default": "'white'",
+        "description": "The text color for the counter digits."
+      },
+      "fontWeight": {
+        "type": "string | number",
+        "default": "'bold'",
+        "description": "The font weight of the counter digits."
+      },
+      "containerStyle": {
+        "type": "React.CSSProperties",
+        "default": "{}",
+        "description": "Custom inline styles for the outer container."
+      },
+      "counterStyle": {
+        "type": "React.CSSProperties",
+        "default": "{}",
+        "description": "Custom inline styles for the counter element."
+      },
+      "digitStyle": {
+        "type": "React.CSSProperties",
+        "default": "{}",
+        "description": "Custom inline styles for each digit container."
+      },
+      "gradientHeight": {
+        "type": "number",
+        "default": "16",
+        "description": "The height (in pixels) of the gradient overlays."
+      },
+      "gradientFrom": {
+        "type": "string",
+        "default": "'black'",
+        "description": "The starting color for the gradient overlays."
+      },
+      "gradientTo": {
+        "type": "string",
+        "default": "'transparent'",
+        "description": "The ending color for the gradient overlays."
+      },
+      "topGradientStyle": {
+        "type": "React.CSSProperties",
+        "default": "undefined",
+        "description": "Custom inline styles for the top gradient overlay."
+      },
+      "bottomGradientStyle": {
+        "type": "React.CSSProperties",
+        "default": "undefined",
+        "description": "Custom inline styles for the bottom gradient overlay."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Infinite Menu": {
+    "props": {
+      "items": {
+        "type": "object[]",
+        "default": "[{...}]",
+        "description": "List of items containing an image, link, title, and description - or just add what you need."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Rolling Gallery": {
+    "props": {
+      "autoplay": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Controls the autoplay toggle of the carousel. When turned on, it rotates and loops infinitely."
+      },
+      "pauseOnHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Allows the carousel to be paused on hover when autoplay is turned on."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Stepper": {
+    "props": {
+      "children": {
+        "type": "ReactNode",
+        "default": "—",
+        "description": "The Step components (or any custom content) rendered inside the stepper."
+      },
+      "initialStep": {
+        "type": "number",
+        "default": "1",
+        "description": "The first step to display when the stepper is initialized."
+      },
+      "onStepChange": {
+        "type": "(step: number) => void",
+        "default": "() => {}",
+        "description": "Callback fired whenever the step changes."
+      },
+      "onFinalStepCompleted": {
+        "type": "() => void",
+        "default": "() => {}",
+        "description": "Callback fired when the stepper completes its final step."
+      },
+      "stepCircleContainerClassName": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class name for the container holding the step indicators."
+      },
+      "stepContainerClassName": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class name for the row holding the step circles/connectors."
+      },
+      "contentClassName": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class name for the step’s main content container."
+      },
+      "footerClassName": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class name for the footer area containing navigation buttons."
+      },
+      "backButtonProps": {
+        "type": "object",
+        "default": "{}",
+        "description": "Extra props passed to the Back button."
+      },
+      "nextButtonProps": {
+        "type": "object",
+        "default": "{}",
+        "description": "Extra props passed to the Next/Complete button."
+      },
+      "backButtonText": {
+        "type": "string",
+        "default": "\"Back\"",
+        "description": "Text for the Back button."
+      },
+      "nextButtonText": {
+        "type": "string",
+        "default": "\"Continue\"",
+        "description": "Text for the Next button when not on the last step."
+      },
+      "disableStepIndicators": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Disables click interaction on step indicators."
+      },
+      "renderStepIndicator": {
+        "type": "{}",
+        "default": "undefined",
+        "description": "Renders a custom step indicator."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Bounce Cards": {
+    "props": {
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Additional CSS classes for the container."
+      },
+      "images": {
+        "type": "string[]",
+        "default": "[]",
+        "description": "Array of image URLs to display."
+      },
+      "containerWidth": {
+        "type": "number",
+        "default": "—",
+        "description": "Width of the container (px)."
+      },
+      "containerHeight": {
+        "type": "number",
+        "default": "—",
+        "description": "Height of the container (px)."
+      },
+      "animationDelay": {
+        "type": "number",
+        "default": "—",
+        "description": "Delay (in seconds) before the animation starts."
+      },
+      "animationStagger": {
+        "type": "number",
+        "default": "—",
+        "description": "Time (in seconds) between each card's animation."
+      },
+      "easeType": {
+        "type": "string",
+        "default": "elastic.out(1, 0.8)",
+        "description": "Easing function for the bounce."
+      },
+      "transformStyles": {
+        "type": "string[]",
+        "default": "various rotations/translations",
+        "description": "Custom transforms for each card position."
+      },
+      "enableHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, hovering pushes siblings aside and flattens the hovered card's rotation."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Aurora": {
+    "props": {
+      "colorStops": {
+        "type": "[string, string, string]",
+        "default": "[\"#3A29FF\", \"#FF94B4\", \"#FF3232\"]",
+        "description": "An array of three hex colors defining the aurora gradient."
+      },
+      "speed": {
+        "type": "number",
+        "default": "1.0",
+        "description": "Controls the animation speed. Higher values make the aurora move faster."
+      },
+      "blend": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Controls the blending of the aurora effect with the background."
+      },
+      "amplitude": {
+        "type": "number",
+        "default": "1.0",
+        "description": "Controls the height intensity of the aurora effect."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Lightning": {
+    "props": {
+      "hue": {
+        "type": "number",
+        "default": "230",
+        "description": "Hue of the lightning in degrees (0 to 360)."
+      },
+      "xOffset": {
+        "type": "number",
+        "default": "0",
+        "description": "Horizontal offset of the lightning in normalized units."
+      },
+      "speed": {
+        "type": "number",
+        "default": "1",
+        "description": "Animation speed multiplier for the lightning."
+      },
+      "intensity": {
+        "type": "number",
+        "default": "1",
+        "description": "Brightness multiplier for the lightning."
+      },
+      "size": {
+        "type": "number",
+        "default": "1",
+        "description": "Scale factor for the bolt size."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Balatro": {
+    "props": {
+      "spinRotation": {
+        "type": "number",
+        "default": "-2.0",
+        "description": "Base rotation amount affecting the shader effect."
+      },
+      "spinSpeed": {
+        "type": "number",
+        "default": "7.0",
+        "description": "Speed of the spin animation."
+      },
+      "offset": {
+        "type": "[number, number]",
+        "default": "[0.0, 0.0]",
+        "description": "Offset for the shader effect."
+      },
+      "color1": {
+        "type": "string",
+        "default": "\"#DE443B\"",
+        "description": "Primary color in HEX format."
+      },
+      "color2": {
+        "type": "string",
+        "default": "\"#006BB4\"",
+        "description": "Secondary color in HEX format."
+      },
+      "color3": {
+        "type": "string",
+        "default": "\"#162325\"",
+        "description": "Tertiary color in HEX format."
+      },
+      "contrast": {
+        "type": "number",
+        "default": "3.5",
+        "description": "Contrast value affecting color blending."
+      },
+      "lighting": {
+        "type": "number",
+        "default": "0.4",
+        "description": "Lighting factor affecting brightness."
+      },
+      "spinAmount": {
+        "type": "number",
+        "default": "0.25",
+        "description": "Amount of spin influence based on UV length."
+      },
+      "pixelFilter": {
+        "type": "number",
+        "default": "745.0",
+        "description": "Pixel filter factor determining pixelation."
+      },
+      "spinEase": {
+        "type": "number",
+        "default": "1.0",
+        "description": "Ease factor for spin."
+      },
+      "isRotate": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Determines if the shader rotates continuously."
+      },
+      "mouseInteraction": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables or disables mouse interaction for rotation."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Dither": {
+    "props": {
+      "waveSpeed": {
+        "type": "number",
+        "default": "0.05",
+        "description": "Speed of the wave animation."
+      },
+      "waveFrequency": {
+        "type": "number",
+        "default": "3",
+        "description": "Frequency of the wave pattern."
+      },
+      "waveAmplitude": {
+        "type": "number",
+        "default": "0.3",
+        "description": "Amplitude of the wave pattern."
+      },
+      "waveColor": {
+        "type": "[number, number, number]",
+        "default": "[0.5, 0.5, 0.5]",
+        "description": "Color of the wave, defined as an RGB array."
+      },
+      "colorNum": {
+        "type": "number",
+        "default": "4",
+        "description": "Number of colors to use in the dithering effect."
+      },
+      "pixelSize": {
+        "type": "number",
+        "default": "2",
+        "description": "Size of the pixels for the dithering effect."
+      },
+      "disableAnimation": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Disable the wave animation when true."
+      },
+      "enableMouseInteraction": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables mouse interaction to influence the wave effect."
+      },
+      "mouseRadius": {
+        "type": "number",
+        "default": "1",
+        "description": "Radius for the mouse interaction effect."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Shape Blur": {
+    "props": {
+      "variation": {
+        "type": "number",
+        "default": "0",
+        "description": "Selects the shape variation (0-3) used by the shader."
+      },
+      "pixelRatioProp": {
+        "type": "number",
+        "default": "2",
+        "description": "Overrides the pixel ratio, typically set to the device pixel ratio."
+      },
+      "shapeSize": {
+        "type": "number",
+        "default": "1.2",
+        "description": "Controls the size of the shape."
+      },
+      "roundness": {
+        "type": "number",
+        "default": "0.4",
+        "description": "Determines the roundness of the shape's corners."
+      },
+      "borderSize": {
+        "type": "number",
+        "default": "0.05",
+        "description": "Sets the thickness of the border."
+      },
+      "circleSize": {
+        "type": "number",
+        "default": "0.3",
+        "description": "Determines the size of the hover circle effect."
+      },
+      "circleEdge": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Controls the edge softness of the hover circle."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Threads": {
+    "props": {
+      "color": {
+        "type": "[number, number, number]",
+        "default": "[1, 1, 1]",
+        "description": "Customizes the color of the lines (RGB)."
+      },
+      "amplitude": {
+        "type": "number",
+        "default": "1",
+        "description": "Adjusts the intensity of the wave effect on the lines."
+      },
+      "distance": {
+        "type": "number",
+        "default": "0",
+        "description": "Controls the spacing between the lines. A value of 0 means no offset."
+      },
+      "enableMouseInteraction": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Enables smooth mouse hover effects that modulate the line's movement and amplitude."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Hyperspeed": {
+    "props": {
+      "effectOptions": {
+        "type": "object",
+        "default": "See the \"code\" tab for default values and presets.",
+        "description": "The highly customizable configuration object for the effect, controls things like colors, distortion, line properties, etc."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Iridescence": {
+    "props": {
+      "color": {
+        "type": "Array<number>",
+        "default": "[0.3, 0.2, 0.5]",
+        "description": "Base color as an array of RGB values (each between 0 and 1)."
+      },
+      "speed": {
+        "type": "number",
+        "default": "1.0",
+        "description": "Speed multiplier for the animation."
+      },
+      "amplitude": {
+        "type": "number",
+        "default": "0.1",
+        "description": "Amplitude for the mouse-driven effect."
+      },
+      "mouseReact": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Enable or disable mouse interaction with the shader."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Grid Distortion": {
+    "props": {
+      "imgageSrc": {
+        "type": "string",
+        "default": "—",
+        "description": "The image you want to render inside the container."
+      },
+      "grid": {
+        "type": "number",
+        "default": "15",
+        "description": "The number of cells present in the distortion grid"
+      },
+      "mouse": {
+        "type": "number",
+        "default": "0.1",
+        "description": "The size of the distortion effect that follows the cursor."
+      },
+      "relaxation": {
+        "type": "number",
+        "default": "0.9",
+        "description": "The speed at which grid cells return to their initial state."
+      },
+      "strength": {
+        "type": "number",
+        "default": "0.15",
+        "description": "The overall strength of the distortion effect."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Any custom class(es) you want to apply to the container."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Ballpit": {
+    "props": {
+      "count": {
+        "type": "number",
+        "default": "200",
+        "description": "Sets the number of balls in the ballpit."
+      },
+      "gravity": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Controls the gravity affecting the balls."
+      },
+      "friction": {
+        "type": "number",
+        "default": "0.9975",
+        "description": "Sets the friction applied to the ball movement."
+      },
+      "wallBounce": {
+        "type": "number",
+        "default": "0.95",
+        "description": "Determines how much balls bounce off walls."
+      },
+      "followCursor": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enables or disables the sphere following the cursor."
+      },
+      "colors": {
+        "type": "array",
+        "default": "[0, 0, 0]",
+        "description": "Defines the colors of the balls."
+      },
+      "ambientColor": {
+        "type": "number",
+        "default": "16777215",
+        "description": "Sets the ambient light color."
+      },
+      "ambientIntensity": {
+        "type": "number",
+        "default": "1",
+        "description": "Controls the intensity of ambient light."
+      },
+      "lightIntensity": {
+        "type": "number",
+        "default": "200",
+        "description": "Sets the intensity of the main light source."
+      },
+      "minSize": {
+        "type": "number",
+        "default": "0.5",
+        "description": "Specifies the minimum size of the balls."
+      },
+      "maxSize": {
+        "type": "number",
+        "default": "1",
+        "description": "Specifies the maximum size of the balls."
+      },
+      "size0": {
+        "type": "number",
+        "default": "1",
+        "description": "Initial size value for the cursor ball."
+      },
+      "maxVelocity": {
+        "type": "number",
+        "default": "0.15",
+        "description": "Limits the maximum velocity of the balls."
+      },
+      "maxX": {
+        "type": "number",
+        "default": "5",
+        "description": "Defines the maximum X-coordinate boundary."
+      },
+      "maxY": {
+        "type": "number",
+        "default": "5",
+        "description": "Defines the maximum Y-coordinate boundary."
+      },
+      "maxZ": {
+        "type": "number",
+        "default": "2",
+        "description": "Defines the maximum Z-coordinate boundary."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Orb": {
+    "props": {
+      "hue": {
+        "type": "number",
+        "default": "0",
+        "description": "The base hue for the orb (in degrees)."
+      },
+      "hoverIntensity": {
+        "type": "number",
+        "default": "0.2",
+        "description": "Controls the intensity of the hover distortion effect."
+      },
+      "rotateOnHover": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Toggle to enable or disable continuous rotation on hover."
+      },
+      "forceHoverState": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Force hover animations even when the orb is not actually hovered."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Grid Motion": {
+    "props": {
+      "items": {
+        "type": "array",
+        "default": "[]",
+        "description": "An array of items to display in the grid. Each item can be a string, JSX element, or an image URL."
+      },
+      "gradientColor": {
+        "type": "string",
+        "default": "black",
+        "description": "Controls the color of the radial gradient used as the background."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Liquid Chrome": {
+    "props": {
+      "baseColor": {
+        "type": "RGB array (number[3])",
+        "default": "[0.1, 0.1, 0.1]",
+        "description": "Base color of the component. Specify as an RGB array."
+      },
+      "speed": {
+        "type": "number",
+        "default": "1.0",
+        "description": "Animation speed multiplier."
+      },
+      "amplitude": {
+        "type": "number",
+        "default": "0.6",
+        "description": "Amplitude of the distortion."
+      },
+      "frequencyX": {
+        "type": "number",
+        "default": "2.5",
+        "description": "Frequency modifier for the x distortion."
+      },
+      "frequencyY": {
+        "type": "number",
+        "default": "1.5",
+        "description": "Frequency modifier for the y distortion."
+      },
+      "interactive": {
+        "type": "boolean",
+        "default": "true",
+        "description": "Enable mouse/touch interaction."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Squares": {
+    "props": {},
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Letter Glitch": {
+    "props": {
+      "glitchColors": {
+        "type": "string[]",
+        "default": "['#2b4539', '#61dca3', '#61b3dc']",
+        "description": "Controls the colors of the letters rendered in the canvas."
+      },
+      "glitchSpeed": {
+        "type": "number",
+        "default": "50",
+        "description": "Controls the speed at which letters scramble in the animation."
+      },
+      "centerVignette": {
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, renders a radial gradient in the center of the container"
+      },
+      "outerVignette": {
+        "type": "boolean",
+        "default": "true",
+        "description": "When true, renders an inner radial gradient around the edges of the container."
+      },
+      "smooth": {
+        "type": "boolean",
+        "default": "true",
+        "description": "When true, smoothens the animation of the letters for a more subtle feel."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Particles": {
+    "props": {
+      "particleCount": {
+        "type": "number",
+        "default": "200",
+        "description": "The number of particles to generate."
+      },
+      "particleSpread": {
+        "type": "number",
+        "default": "10",
+        "description": "Controls how far particles are spread from the center."
+      },
+      "speed": {
+        "type": "number",
+        "default": "0.1",
+        "description": "Speed factor controlling the animation pace."
+      },
+      "particleColors": {
+        "type": "string[]",
+        "default": "['#ffffff']",
+        "description": "An array of hex color strings used to color the particles."
+      },
+      "moveParticlesOnHover": {
+        "type": "boolean",
+        "default": "false",
+        "description": "Determines if particles should move in response to mouse hover."
+      },
+      "particleHoverFactor": {
+        "type": "number",
+        "default": "1",
+        "description": "Multiplier for the particle movement when hovering."
+      },
+      "alphaParticles": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, particles are rendered with varying transparency; otherwise, as solid circles."
+      },
+      "particleBaseSize": {
+        "type": "number",
+        "default": "100",
+        "description": "The base size of the particles."
+      },
+      "sizeRandomness": {
+        "type": "number",
+        "default": "1",
+        "description": "Controls the variation in particle sizes (0 means all particles have the same size)."
+      },
+      "cameraDistance": {
+        "type": "number",
+        "default": "20",
+        "description": "Distance from the camera to the particle system."
+      },
+      "disableRotation": {
+        "type": "boolean",
+        "default": "false",
+        "description": "If true, stops the particle system from rotating."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  },
+  "Waves": {
+    "props": {
+      "lineColor": {
+        "type": "string",
+        "default": "black",
+        "description": "Defines the color of the wave lines drawn on the canvas."
+      },
+      "backgroundColor": {
+        "type": "string",
+        "default": "transparent",
+        "description": "Sets the background color of the waves container."
+      },
+      "waveSpeedX": {
+        "type": "number",
+        "default": "—",
+        "description": "Horizontal speed factor for the wave animation."
+      },
+      "waveSpeedY": {
+        "type": "number",
+        "default": "—",
+        "description": "Vertical speed factor for the wave animation."
+      },
+      "waveAmpX": {
+        "type": "number",
+        "default": "—",
+        "description": "Horizontal amplitude of each wave."
+      },
+      "waveAmpY": {
+        "type": "number",
+        "default": "—",
+        "description": "Vertical amplitude of each wave."
+      },
+      "xGap": {
+        "type": "number",
+        "default": "—",
+        "description": "Horizontal gap between individual wave lines."
+      },
+      "yGap": {
+        "type": "number",
+        "default": "—",
+        "description": "Vertical gap between points on each wave line."
+      },
+      "friction": {
+        "type": "number",
+        "default": "—",
+        "description": "Controls how quickly the cursor effect slows down."
+      },
+      "tension": {
+        "type": "number",
+        "default": "—",
+        "description": "Determines the 'springiness' of the cursor effect on points."
+      },
+      "maxCursorMove": {
+        "type": "number",
+        "default": "—",
+        "description": "Limits how far each point can shift due to cursor movement."
+      },
+      "style": {
+        "type": "object",
+        "default": "{}",
+        "description": "Inline styles applied to the container element."
+      },
+      "className": {
+        "type": "string",
+        "default": "—",
+        "description": "Custom class name(s) applied to the container element."
+      }
+    },
+    "installation": "",
+    "usage": "",
+    "dependencies": "",
+    "oneTimeInstallation": {
+      "tsTailwind": ""
+    }
+  }
+}
